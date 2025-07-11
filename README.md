@@ -65,7 +65,7 @@ Built with ❤️ using:
 
 ## 📁 Project Structure
 
-\`\`\`plaintext
+```plaintext
 my-portfolio/
  ├── public/
  ├── src/
@@ -79,7 +79,7 @@ my-portfolio/
  ├── vite.config.js
  ├── tailwind.config.js
  └── ...
-\`\`\`
+```
 
 ---
 
@@ -87,7 +87,7 @@ my-portfolio/
 
 To run locally:
 
-\`\`\`bash
+```bash
 # 1️⃣ Install dependencies
 npm install
 
@@ -99,7 +99,7 @@ npm run build
 
 # 4️⃣ Preview production build
 npm run preview
-\`\`\`
+```
 
 ---
 
