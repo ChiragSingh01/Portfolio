@@ -121,9 +121,9 @@ Deployed on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)
 
 I’m always excited to connect!
 
-📧 **[yourname@email.com](mailto:yourname@email.com)**  
-🌐 **[LinkedIn](https://www.linkedin.com/in/yourname)**  
-🐙 **[GitHub](https://github.com/YourUsername)**
+📧 **[chiraagsingh7@gmail.com](mailto:chiraagsingh7@gmail.com)**  
+🌐 **[LinkedIn](www.linkedin.com/in/chirag-singh-117698313)**  
+🐙 **[GitHub](https://github.com/ChiragSingh01)**
 
 ---
 
