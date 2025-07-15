@@ -24,6 +24,7 @@ export default function WebContact() {
 
   return (
     <div className="w-full mt-30 max-w-2xl mx-auto text-center">
+      <h3 className='text-red-600'>Under Construction</h3>
       <motion.div
         whileHover={{ scale: 1.02 }}
         className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition"

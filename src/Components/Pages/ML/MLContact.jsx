@@ -22,6 +22,7 @@ export default function MLContact() {
   const phoneNumber = "+918920124450"
   return (
     <div className="w-full mt-16 max-w-2xl mx-auto text-center">
+      <h3 className='text-red-600'>Under Construction</h3>
       <motion.div
         whileHover={{ scale: 1.02 }}
         className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition"
