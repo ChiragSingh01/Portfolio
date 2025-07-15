@@ -11,7 +11,6 @@ export default function WebNavbar({ darkMode, setDarkMode }) {
   const location = useLocation()
 
   const navLinks = [
-    { name: 'Web Home', type: 'route', path: '/web' },
     { name: 'About', type: 'scroll', id: 'about' },
     { name: 'Skills', type: 'scroll', id: 'skills' },
     { name: 'Projects', type: 'scroll', id: 'projects' },

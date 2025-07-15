@@ -11,7 +11,6 @@ export default function MLNavbar({ darkMode, setDarkMode }) {
   const location = useLocation()
 
   const navLinks = [
-    { name: 'ML Home', type: 'route', path: '/ml' },
     { name: 'About', type: 'scroll', id: 'about' },
     { name: 'Skills', type: 'scroll', id: 'skills' },
     { name: 'Projects', type: 'scroll', id: 'projects' },
