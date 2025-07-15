@@ -43,7 +43,7 @@ Built with ❤️ using:
 - **Education:** My academic journey.
 - **Experience:** Professional work history.
 - **Projects:** Mini galleries for ML & Web, with links to detailed pages.
-- **Contact:** Easy way to reach me — my messages auto-send via <a href="https://www.emailjs.com" target="_blank">EmailJS</a>!
+- **Contact:** Easy way to reach me — my messages auto-send via [EmailJS](https://www.emailjs.com)!
 
 
 ### 🔗 **Project Details**
@@ -114,8 +114,6 @@ npm run preview
 ## 📄 License
 
 This project is open source — feel free to fork and build your own portfolio!
-
-> **⭐ If you like it, don’t forget to give it a star!**
 
 Thanks for visiting 🚀  
 Happy building! ✨
