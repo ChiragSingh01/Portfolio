@@ -16,7 +16,7 @@ export default function WebContact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const mailtoLink = `mailto:yourmail@example.com?subject=Portfolio Message from ${form.name}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${form.name} (${form.email})`
+    const mailtoLink = `mailto:chiraagsingh7@gmail.com?subject=Portfolio Message from ${form.name}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${form.name} (${form.email})`
     window.location.href = mailtoLink
   }
 
