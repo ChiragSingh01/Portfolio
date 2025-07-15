@@ -29,8 +29,7 @@ export const projects = [
     readme:
       '/ReadMe/Portfolio_README.md',
     techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Email.js'],
-    github: 'https://github.com/yourusername/portfolio',
-    liveDemo: 'https://yourportfolio.live',
+    github: 'https://github.com/ChiragSingh01/Portfolio',
     backLink: '/web',
     theme: 'web',
     screenshots: [

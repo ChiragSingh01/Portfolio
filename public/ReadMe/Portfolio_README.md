@@ -43,7 +43,7 @@ Built with ❤️ using:
 - **Education:** My academic journey.
 - **Experience:** Professional work history.
 - **Projects:** Mini galleries for ML & Web, with links to detailed pages.
-- **Contact:** Easy way to reach me — my messages auto-send via <a href="https://www.emailjs.com" target="_blank"><img src="https://www.emailjs.com/logo.png" alt="EmailJS" width="20" style="vertical-align: middle;"/> EmailJS</a>!
+- **Contact:** Easy way to reach me — my messages auto-send via <a href="https://www.emailjs.com" target="_blank">EmailJS</a>!
 
 
 ### 🔗 **Project Details**
@@ -101,13 +101,6 @@ npm run build
 # 4️⃣ Preview production build
 npm run preview
 ```
-
----
-
-## 🌐 Live Demo
-
-Deployed on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/) for blazing fast performance.
-
 ---
 
 ## 🛠️ Future Plans
@@ -115,16 +108,6 @@ Deployed on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)
 - 🔗 Add backend integrations for blog or CMS.
 - 🤖 Enhance AI Assistant with LLMs.
 - 📈 Add analytics dashboard to track visitor interactions.
-
----
-
-## 📬 Contact
-
-I’m always excited to connect!
-
-📧 **[yourname@email.com](mailto:yourname@email.com)**  
-🌐 **[LinkedIn](https://www.linkedin.com/in/yourname)**  
-🐙 **[GitHub](https://github.com/YourUsername)**
 
 ---
 
