@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiOutlineMail } from 'react-icons/hi'
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa'
+import emailjs from 'emailjs-com' // ✅ Add this import
 
 export default function WebContact() {
   const [form, setForm] = useState({
@@ -16,8 +17,23 @@ export default function WebContact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const mailtoLink = `mailto:chiraagsingh7@gmail.com?subject=Portfolio Message from ${form.name}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${form.name} (${form.email})`
-    window.location.href = mailtoLink
+
+    emailjs.send(
+      'service_r2lu2ux', // ✅ YOUR SERVICE ID
+      'template_pcvp0qa', // ⬅️ Replace with your real template ID
+      form,
+      'zzR1uRtSr1rpDdDyC'  // ⬅️ Replace with your real EmailJS public key
+    )
+      .then(
+        (result) => {
+          alert('✅ Message sent successfully!')
+          setForm({ name: '', email: '', message: '' })
+        },
+        (error) => {
+          alert('❌ Failed to send message. Please try again.')
+          console.log(error.text)
+        }
+      )
   }
 
   const phoneNumber = "+918920124450"
@@ -102,20 +118,12 @@ export default function WebContact() {
             <FaEnvelope size={30} />
           </a>
 
-          {/* ✅ Phone Icon with hover bubble */}
           <div className="relative group text-indigo-700 dark:text-yellow-400">
             <FaPhone size={30} className="hover:scale-110 transition" />
-            {/* Tooltip bubble */}
             <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-black dark:bg-white text-white dark:text-black text-xs px-2 py-1 rounded shadow transition">
               {phoneNumber}
             </span>
-            {/* Clickable link (optional) */}
-            <a
-              href={`tel:${phoneNumber}`}
-              className="sr-only"
-            >
-              Call Me
-            </a>
+            <a href={`tel:${phoneNumber}`} className="sr-only">Call Me</a>
           </div>
         </div>
       </motion.div>
