@@ -16,7 +16,7 @@ export default function MLContact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const mailtoLink = `mailto:yourmail@example.com?subject=ML Portfolio Message from ${form.name}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${form.name} (${form.email})`
+    const mailtoLink = `mailto:chiraagsingh7@gmail.com?subject=ML Portfolio Message from ${form.name}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${form.name} (${form.email})`
     window.location.href = mailtoLink
   }
   const phoneNumber = "+918920124450"
