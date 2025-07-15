@@ -43,7 +43,8 @@ Built with ❤️ using:
 - **Education:** My academic journey.
 - **Experience:** Professional work history.
 - **Projects:** Mini galleries for ML & Web, with links to detailed pages.
-- **Contact:** Easy way to reach me.
+- **Contact:** Easy way to reach me — my messages auto-send via <a href="https://www.emailjs.com" target="_blank"><img src="https://www.emailjs.com/logo.png" alt="EmailJS" width="20" style="vertical-align: middle;"/> EmailJS</a>!
+
 
 ### 🔗 **Project Details**
 - Each project card links to a **dedicated details page**.
