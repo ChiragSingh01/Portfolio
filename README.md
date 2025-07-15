@@ -44,7 +44,7 @@ Built with ❤️ using:
 - **Experience:** Professional work history.
 - **Projects:** Mini galleries for ML & Web, with links to detailed pages.
 - **Contact**Easy way to reach me — my messages auto-send via [EmailJS](https://www.emailjs.com)!
-[![EmailJS](https://raw.githubusercontent.com/emailjs/emailjs-com/master/docs/images/logo.png)](https://www.emailjs.com)
+[![EmailJS](https://www.emailjs.com/logo.png)](https://www.emailjs.com)
 
 ### 🔗 **Project Details**
 - Each project card links to a **dedicated details page**.
