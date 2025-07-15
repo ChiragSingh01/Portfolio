@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://YOURDOMAIN/</loc>
+  </url>
+  <url>
+    <loc>https://YOURDOMAIN/ml</loc>
+  </url>
+  <url>
+    <loc>https://YOURDOMAIN/web</loc>
+  </url>
+</urlset>
