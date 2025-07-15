@@ -105,7 +105,7 @@ npm run preview
 
 ## 🌐 Live Demo
 
-Deployed on [Vercel](chirag-portfoli.vercel.app) for blazing fast performance.
+Deployed on [Vercel](https://chirag-portfoli.vercel.app/) for blazing fast performance.
 
 ---
 
@@ -122,7 +122,7 @@ Deployed on [Vercel](chirag-portfoli.vercel.app) for blazing fast performance.
 I’m always excited to connect!
 
 📧 **[chiraagsingh7@gmail.com](mailto:chiraagsingh7@gmail.com)**  
-🌐 **[LinkedIn](https://www.linkedin.com/in/chirag-singh-117698313)** 
+🌐 **[LinkedIn](https://www.linkedin.com/in/chirag-singh-117698313)**
 🐙 **[GitHub](https://github.com/ChiragSingh01)**
 
 ---
