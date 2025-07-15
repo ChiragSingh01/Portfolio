@@ -105,7 +105,7 @@ npm run preview
 
 ## 🌐 Live Demo
 
-Deployed on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/) for blazing fast performance.
+Deployed on [Vercel](chirag-portfoli.vercel.app) for blazing fast performance.
 
 ---
 
@@ -121,9 +121,9 @@ Deployed on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)
 
 I’m always excited to connect!
 
-📧 **[yourname@email.com](mailto:yourname@email.com)**  
-🌐 **[LinkedIn](https://www.linkedin.com/in/yourname)**  
-🐙 **[GitHub](https://github.com/YourUsername)**
+📧 **[yourname@email.com](mailto:chiraagsingh7@gmail.com)**  
+🌐 **[LinkedIn](https://www.linkedin.com/in/chirag-singh-117698313)** 
+🐙 **[GitHub](https://github.com/ChiragSingh01)**
 
 ---
 
