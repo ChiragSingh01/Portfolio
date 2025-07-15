@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiOutlineMail } from 'react-icons/hi'
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa'
-import emailjs from 'emailjs-com' // ✅ Import EmailJS
+import emailjs from 'emailjs-com'
+import CustomAlert from '../../Section/CustomAlert'
 
 export default function MLContact() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [alertOpen, setAlertOpen] = useState(false)
+  const [alertSuccess, setAlertSuccess] = useState(true)
+  const [alertMessage, setAlertMessage] = useState('')
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -19,19 +19,23 @@ export default function MLContact() {
     e.preventDefault()
 
     emailjs.send(
-      'service_r2lu2ux', // ✅ YOUR SERVICE ID
-      'template_pcvp0qa', // ⬅️ Replace with your real template ID
+      'service_r2lu2ux',
+      'template_pcvp0qa',
       form,
-      'zzR1uRtSr1rpDdDyC'  // ⬅️ Replace with your real EmailJS public key
+      'zzR1uRtSr1rpDdDyC'
     )
     .then(
-      (result) => {
-        alert('✅ Message sent successfully!')
+      () => {
+        setAlertSuccess(true)
+        setAlertMessage(`✅ Hi ${form.name}, I have received your message!`)
+        setAlertOpen(true)
         setForm({ name: '', email: '', message: '' })
       },
       (error) => {
-        alert('❌ Failed to send message. Please try again.')
-        console.error(error.text)
+        setAlertSuccess(false)
+        setAlertMessage('❌ Something went wrong. Please try again.')
+        setAlertOpen(true)
+        console.error(error)
       }
     )
   }
@@ -40,7 +44,6 @@ export default function MLContact() {
 
   return (
     <div className="w-full mt-16 max-w-2xl mx-auto text-center">
-      <h3 className='text-red-600'>Under Construction</h3>
       <motion.div
         whileHover={{ scale: 1.02 }}
         className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition"
@@ -65,7 +68,7 @@ export default function MLContact() {
             value={form.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 focus:outline-none"
+            className="w-full px-4 py-3 rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
           />
           <input
             type="email"
@@ -74,7 +77,7 @@ export default function MLContact() {
             value={form.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 focus:outline-none"
+            className="w-full px-4 py-3 rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
           />
           <textarea
             name="message"
@@ -83,7 +86,7 @@ export default function MLContact() {
             value={form.message}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 focus:outline-none"
+            className="w-full px-4 py-3 rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
           ></textarea>
           <button
             type="submit"
@@ -93,41 +96,32 @@ export default function MLContact() {
           </button>
         </form>
 
-        {/* Profile Links */}
         <div className="mt-8 flex justify-center gap-6">
-          <a
-            href="https://www.linkedin.com/in/chirag-singh-117698313"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-yellow-600 dark:text-green-400 hover:scale-110 transition"
-          >
+          <a href="https://www.linkedin.com/in/chirag-singh-117698313" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} />
           </a>
-          <a
-            href="https://github.com/ChiragSingh01"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-yellow-600 dark:text-green-400 hover:scale-110 transition"
-          >
+          <a href="https://github.com/ChiragSingh01" target="_blank" rel="noopener noreferrer">
             <FaGithub size={30} />
           </a>
-          <a
-            href="mailto:chiraagsingh7@gmail.com"
-            className="text-yellow-600 dark:text-green-400 hover:scale-110 transition"
-          >
+          <a href="mailto:chiraagsingh7@gmail.com">
             <FaEnvelope size={30} />
           </a>
-          <div className="relative group text-yellow-600 dark:text-green-400">
-            <FaPhone size={30} className="hover:scale-110 transition" />
-            <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-black dark:bg-white text-white dark:text-black text-xs px-2 py-1 rounded shadow transition">
+          <div className="relative group">
+            <FaPhone size={30} />
+            <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-black text-white text-xs px-2 py-1 rounded shadow">
               {phoneNumber}
             </span>
-            <a href={`tel:${phoneNumber}`} className="sr-only">
-              Call Me
-            </a>
+            <a href={`tel:${phoneNumber}`} className="sr-only">Call Me</a>
           </div>
         </div>
       </motion.div>
+      <CustomAlert
+        isOpen={alertOpen}
+        onClose={() => setAlertOpen(false)}
+        isSuccess={alertSuccess}
+        message={alertMessage}
+        avatar="/Chirag_3d_Avtar.png"
+      />
     </div>
   )
 }

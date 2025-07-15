@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiOutlineMail } from 'react-icons/hi'
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa'
-import emailjs from 'emailjs-com' // ✅ Add this import
+import emailjs from 'emailjs-com'
+import CustomAlert from '../../Section/CustomAlert'
 
 export default function WebContact() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+    const [alertOpen, setAlertOpen] = useState(false)
+    const [alertSuccess, setAlertSuccess] = useState(true)
+    const [alertMessage, setAlertMessage] = useState('')
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -19,28 +19,31 @@ export default function WebContact() {
     e.preventDefault()
 
     emailjs.send(
-      'service_r2lu2ux', // ✅ YOUR SERVICE ID
-      'template_pcvp0qa', // ⬅️ Replace with your real template ID
+      'service_r2lu2ux',
+      'template_pcvp0qa',
       form,
-      'zzR1uRtSr1rpDdDyC'  // ⬅️ Replace with your real EmailJS public key
+      'zzR1uRtSr1rpDdDyC'
     )
       .then(
-        (result) => {
-          alert('✅ Message sent successfully!')
-          setForm({ name: '', email: '', message: '' })
-        },
-        (error) => {
-          alert('❌ Failed to send message. Please try again.')
-          console.log(error.text)
-        }
-      )
+      () => {
+        setAlertSuccess(true)
+        setAlertMessage(`✅ Hi ${form.name}, I have received your message!`)
+        setAlertOpen(true)
+        setForm({ name: '', email: '', message: '' })
+      },
+      (error) => {
+        setAlertSuccess(false)
+        setAlertMessage('❌ Something went wrong. Please try again.')
+        setAlertOpen(true)
+        console.error(error)
+      }
+    )
   }
 
   const phoneNumber = "+918920124450"
 
   return (
     <div className="w-full mt-30 max-w-2xl mx-auto text-center">
-      <h3 className='text-red-600'>Under Construction</h3>
       <motion.div
         whileHover={{ scale: 1.02 }}
         className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition"
@@ -127,6 +130,13 @@ export default function WebContact() {
           </div>
         </div>
       </motion.div>
+      <CustomAlert
+        isOpen={alertOpen}
+        onClose={() => setAlertOpen(false)}
+        isSuccess={alertSuccess}
+        message={alertMessage}
+        avatar="/Chirag_3d_Avtar.png"
+      />
     </div>
   )
 }
