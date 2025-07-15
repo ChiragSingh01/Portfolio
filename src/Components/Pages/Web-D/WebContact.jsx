@@ -88,7 +88,7 @@ export default function WebContact() {
             <FaLinkedin size={30} />
           </a>
           <a
-            href="https://github.com/yourgithubusername"
+            href="https://github.com/ChiragSingh01"
             target="_blank"
             rel="noopener noreferrer"
             className="text-indigo-700 dark:text-yellow-400 hover:scale-110 transition"
@@ -96,7 +96,7 @@ export default function WebContact() {
             <FaGithub size={30} />
           </a>
           <a
-            href="mailto:yourmail@example.com"
+            href="mailto:chiraagsingh7@gmail.com"
             className="text-indigo-700 dark:text-yellow-400 hover:scale-110 transition"
           >
             <FaEnvelope size={30} />

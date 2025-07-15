@@ -86,7 +86,7 @@ export default function MLContact() {
             <FaLinkedin size={30} />
           </a>
           <a
-            href="https://github.com/yourgithubusername"
+            href="https://github.com/ChiragSingh01"
             target="_blank"
             rel="noopener noreferrer"
             className="text-yellow-600 dark:text-green-400 hover:scale-110 transition"
@@ -94,7 +94,7 @@ export default function MLContact() {
             <FaGithub size={30} />
           </a>
           <a
-            href="mailto:yourmail@example.com"
+            href="mailto:chiraagsingh7@gmail.com"
             className="text-yellow-600 dark:text-green-400 hover:scale-110 transition"
           >
             <FaEnvelope size={30} />
