@@ -45,8 +45,8 @@ export default function WebNavbar({ darkMode, setDarkMode }) {
             alt="Logo"
             className="w-11 h-11 rounded-full object-cover"
           />
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Chirag
+          <h1 className=" nav-font text-2xl font-bold text-gray-900 dark:text-white">
+            Chirag Singh
           </h1>
         </div>
 

@@ -52,7 +52,7 @@ export default function FloatingAvatar({ from, section, theme = 'web', visitorNa
           src="/Chirag_3d_Avtar.png"
           alt="Assistant"
           className={`w-16 h-16 rounded-full border-2 ${
-            theme === 'web' ? 'border-indigo-700' : 'border-yellow-600'
+            theme === 'web' ? 'border-indigo-700 dark:border-yellow-400' : 'border-yellow-600 dark:border-green-400'
           } shadow-lg`}
           initial={{ y: 20, opacity: 0 }}
           animate={{ opacity: 1, y: -10 }}

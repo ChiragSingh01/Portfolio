@@ -115,7 +115,7 @@ export default function Intro({ to, setVisitorName }) {
             : {}
         }
         transition={{ duration: 1.5, ease: 'easeInOut' }}
-        className="rounded-full overflow-hidden border-4 border-indigo-700 shadow-xl z-[100]"
+        className="rounded-full overflow-hidden border-2 border-indigo-700 shadow-xl z-[100]"
       >
         <img
           src="/Chirag_3d_Avtar.png"
@@ -130,7 +130,7 @@ export default function Intro({ to, setVisitorName }) {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: -30 }}
           transition={{ duration: 0.6 }}
-          className="fixed bottom-24 left-8 bg-white text-black px-4 py-2 rounded-xl shadow-md z-[100]"
+          className="fixed bottom-4 left-28 bg-white text-black px-4 py-2 rounded-xl shadow-md z-[100]"
         >
           You can find me here!
         </motion.div>

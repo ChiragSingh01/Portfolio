@@ -8,3 +8,8 @@
 .backface-hidden {
   backface-visibility: hidden;
 }
+.nav-font{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
