@@ -94,12 +94,9 @@ export default function Web({visitorName}) {
         <section ref={experienceRef} id='experience' data-section="experience"><WebExperience/></section>
         <section ref={educationRef} id='education' data-section="education"><Education theme="web" /></section>
         <section ref={contactRef} id='contact' data-section="contact"><WebContact/></section>
-
-        <FloatingAvatar section={activeSection} theme="web" visitorName={visitorName}/>
-
       </div>
-      
     </section>
+    <FloatingAvatar section={activeSection} theme="web" visitorName={visitorName}/>
     <WebFooter></WebFooter>
     </>
     

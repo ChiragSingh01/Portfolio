@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Typewriter } from 'react-simple-typewriter'
-import { useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Intro({ to, setVisitorName }) {
   const [step, setStep] = useState(1)
@@ -12,17 +12,17 @@ export default function Intro({ to, setVisitorName }) {
   const [slideToCorner, setSlideToCorner] = useState(false)
   const [showCornerMessage, setShowCornerMessage] = useState(false)
   const [showBackdrop, setShowBackdrop] = useState(true)
-  const [goto, setgoto] = useState('this')
+  const [goto, setGoto] = useState('this')
 
-    useEffect(() => {
-      if (to === 'web') {
-        setgoto('my Web Development');
-      } else if (to === 'ml') {
-        setgoto('my Machine Learning');
-      } else {
-        setgoto('this');
-      }
-    }, [to]);
+  useEffect(() => {
+    if (to === 'web') {
+      setGoto('my Web Development')
+    } else if (to === 'ml') {
+      setGoto('my Machine Learning')
+    } else {
+      setGoto('this')
+    }
+  }, [to])
 
   const navigate = useNavigate()
 
@@ -34,7 +34,7 @@ export default function Intro({ to, setVisitorName }) {
     if (step === 2) {
       const t = setTimeout(() => {
         setShowInput(true)
-      }, 5000)
+      }, 3000)
       return () => clearTimeout(t)
     }
   }, [step])
@@ -48,36 +48,32 @@ export default function Intro({ to, setVisitorName }) {
 
     setTimeout(() => {
       setShowStartButton(true)
-    }, 5000)
+    }, 4000)
   }
 
   const handleStart = () => {
     setSlideToCorner(true)
 
-    // Fade out backdrop
     setTimeout(() => {
       setShowBackdrop(false)
-    }, 500) // match slide timing
+    }, 500)
 
-    // Show corner message
     setTimeout(() => {
       setShowCornerMessage(true)
     }, 1000)
 
-    // Navigate after all
     setTimeout(() => {
       if (to === 'web' || to === 'ml') {
-      navigate('/MainHome', { state: { from: `${to}` } })
-    }
-    else{
-      navigate('/MainHome')
-    }
+        navigate('/MainHome', { state: { from: `${to}` } })
+      } else {
+        navigate('/MainHome')
+      }
     }, 3000)
   }
 
   return (
-    <div className='h-screen relative bg-gradient-to-r from-indigo-500 to-teal-400 dark:from-indigo-950 dark:to-teal-900'>
-      {/* ✅ Backdrop that fades out */}
+    <div className="h-screen relative bg-gradient-to-r from-indigo-500 to-teal-400 dark:from-indigo-950 dark:to-teal-900">
+      {/* ✅ Backdrop */}
       <AnimatePresence>
         {showBackdrop && (
           <motion.div
@@ -89,7 +85,7 @@ export default function Intro({ to, setVisitorName }) {
         )}
       </AnimatePresence>
 
-      {/* ✅ Avatar that slides */}
+      {/* ✅ Avatar */}
       <motion.div
         initial={{
           position: 'fixed',
@@ -129,8 +125,8 @@ export default function Intro({ to, setVisitorName }) {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: -30 }}
-          transition={{ duration: 0.6 }}
-          className="fixed bottom-4 left-28 bg-white text-black px-4 py-2 rounded-xl shadow-md z-[100]"
+          transition={{ duration: 0.3 }}
+          className="fixed bottom-4 left-28 bg-white dark:bg-gray-900 text-black dark:text-white px-4 py-2 rounded-xl shadow-md z-[100] text-sm md:text-base"
         >
           You can find me here!
         </motion.div>
@@ -138,20 +134,20 @@ export default function Intro({ to, setVisitorName }) {
 
       {/* ✅ Steps */}
       {!slideToCorner && (
-        <motion.div className="fixed inset-0 flex flex-col items-center justify-center z-[95]">
+        <motion.div className="fixed inset-0 flex flex-col items-center justify-center z-[95] px-4">
           {step === 1 && (
             <motion.h2
-              className="text-2xl text-white mb-4 text-center"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-4 text-center"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
-              <Typewriter words={["Hi! I’m Chirag's assistant."]} typeSpeed={40} cursor />
+              <Typewriter words={["Hi! I’m Chirag's assistant."]} typeSpeed={30} cursor />
             </motion.h2>
           )}
 
           {step === 2 && (
             <motion.h2
-              className="text-2xl text-white mb-4 text-center max-w-xl"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-4 text-center max-w-xl"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
@@ -159,24 +155,24 @@ export default function Intro({ to, setVisitorName }) {
                 words={[
                   "Tell me your name so I can interact with you better, or leave it blank and submit."
                 ]}
-                typeSpeed={40}
+                typeSpeed={30}
                 cursor
               />
             </motion.h2>
           )}
 
           {showInput && !showPersonalized && (
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center w-full max-w-sm">
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your name"
-                className="px-4 py-2 rounded-md text-white mb-4"
+                className="px-4 py-2 rounded-md text-black dark:text-white w-full mb-4"
               />
               <button
                 onClick={handleNameSubmit}
-                className="bg-indigo-600 text-white px-6 py-2 rounded-md"
+                className="bg-indigo-600 text-white px-6 py-2 rounded-md w-full sm:w-auto"
               >
                 Submit
               </button>
@@ -185,7 +181,7 @@ export default function Intro({ to, setVisitorName }) {
 
           {showPersonalized && (
             <motion.h2
-              className="text-2xl text-white mb-4 text-center max-w-xl"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-4 text-center max-w-2xl"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
@@ -193,7 +189,7 @@ export default function Intro({ to, setVisitorName }) {
                 words={[
                   `${name && name.trim() ? `Hi ${name.trim()}!` : ''} I’ll help you navigate ${goto} portfolio and show you how to interact with each element. Shall we start?`
                 ]}
-                typeSpeed={40}
+                typeSpeed={30}
                 cursor
               />
             </motion.h2>
@@ -202,7 +198,7 @@ export default function Intro({ to, setVisitorName }) {
           {showStartButton && (
             <button
               onClick={handleStart}
-              className="bg-green-600 text-white px-6 py-2 rounded-md mt-4"
+              className="bg-green-600 text-white px-6 py-2 rounded-md mt-4 text-base sm:text-lg md:text-xl"
             >
               Yes
             </button>

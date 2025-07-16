@@ -43,7 +43,7 @@ export default function Home({ visitorName = '' }) {
   }, [])
 
   return (
-    <section className="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-indigo-500 to-teal-400 dark:from-indigo-950 dark:to-teal-900 px-4">
+    <section className="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-indigo-500 to-teal-400 dark:from-indigo-950 dark:to-teal-900 px-4 overflow-visible">
       {/* Flip container */}
       <div className="relative w-40 h-40 mb-6 perspective">
         <AnimatePresence>

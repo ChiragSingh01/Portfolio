@@ -13,10 +13,10 @@ export const projects = [
     theme: 'web',
     screenshots: [
       '/DemoGallary/AstitvaDemo/Home.jpeg',
-      '/DemoGallary/AstitvaDemo/AboutUs.jpeg',
+      '/DemoGallary/AstitvaDemo/About Us.jpeg',
       '/DemoGallary/AstitvaDemo/contact.jpeg',
       '/DemoGallary/AstitvaDemo/donation.jpeg',
-      '/DemoGallary/AstitvaDemo/joinus.jpeg',
+      '/DemoGallary/AstitvaDemo/join us.jpeg',
       '/DemoGallary/AstitvaDemo/Video1.mp4'
 
     ]

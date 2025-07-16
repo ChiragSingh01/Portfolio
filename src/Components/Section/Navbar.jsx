@@ -22,7 +22,7 @@ export default function MainNavbar({ darkMode, setDarkMode }) {
     <motion.nav
       animate={{ opacity }}
       transition={{ duration: 0.3 }}
-      className="fixed top-0 left-0 w-full flex flex-col items-center px-8 py-4 bg-white dark:bg-[#0c1322] shadow-md z-50 backdrop-blur-md border-b-3 border-black dark:border-white"
+      className="relative top-0 left-0 w-full flex flex-col items-center px-8 py-4 bg-white dark:bg-[#0c1322] shadow-md z-50 backdrop-blur-md border-b-3 border-black dark:border-white"
     >
       <div className="w-full flex items-center justify-between">
         <div className="flex items-center gap-3">

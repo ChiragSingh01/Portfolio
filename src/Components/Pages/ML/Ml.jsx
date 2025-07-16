@@ -93,12 +93,9 @@ export default function ML( {visitorName} ) {
         <section ref={experienceRef} id='experience' data-section="experience"><MLExperience/></section>
         <section ref={educationRef} id='education' data-section="education"><Education theme="ml" /></section>
         <section ref={contactRef} id='contact' data-section="contact"><MLContact/></section>
-
-        <FloatingAvatar section={activeSection} theme="ml" visitorName={visitorName}/>
-
       </div>
-      
     </section>
+    <FloatingAvatar section={activeSection} theme="ml" visitorName={visitorName}/>
     <MLFooter></MLFooter>
     </>
   )
