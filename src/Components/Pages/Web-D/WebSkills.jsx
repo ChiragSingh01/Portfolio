@@ -7,49 +7,57 @@ export default function WebSkills() {
       name: 'HTML',
       icon: <SiHtml5 size={30} className="text-orange-500" />,
       level: 'Expert',
-      percent: 95
+      percent: 95,
+      usedIn: 'Landing Pages, Portfolio'
     },
     {
       name: 'CSS',
       icon: <SiCss3 size={30} className="text-blue-500" />,
       level: 'Expert',
-      percent: 95
+      percent: 95,
+      usedIn: 'Styled components, Animations'
     },
     {
       name: 'JavaScript',
       icon: <SiJavascript size={30} className="text-yellow-400" />,
       level: 'Advanced',
-      percent: 85
+      percent: 85,
+      usedIn: 'All projects, Dynamic UI'
     },
     {
       name: 'React',
       icon: <SiReact size={30} className="text-sky-400" />,
       level: 'Advanced',
-      percent: 85
+      percent: 85,
+      usedIn: 'Portfolio Website, Todo App'
     },
     {
       name: 'Tailwind CSS',
       icon: <SiTailwindcss size={30} className="text-teal-400" />,
       level: 'Advanced',
-      percent: 85
+      percent: 85,
+      usedIn: 'All modern UI layouts'
     },
     {
       name: 'Framer Motion',
       icon: <SiFramer size={30} className="text-pink-400" />,
       level: 'Intermediate',
-      percent: 65
+      percent: 65,
+      usedIn: 'Page transitions, Animations'
     },
     {
       name: 'Firebase',
       icon: <SiFirebase size={30} className="text-yellow-500" />,
       level: 'Intermediate',
-      percent: 65
+      percent: 65,
+      usedIn: 'Auth, Database for apps'
     },
     {
       name: 'Git',
       icon: <SiGit size={30} className="text-red-500" />,
       level: 'Advanced',
-      percent: 85
+      percent: 85,
+      usedIn: 'Version control for all projects'
     }
   ]
 
@@ -63,12 +71,11 @@ export default function WebSkills() {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition w-full"
+            className="group relative flex flex-col items-center bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 w-full overflow-hidden"
           >
             {skill.icon}
             <p className="mt-2 font-semibold text-gray-800 dark:text-gray-100">{skill.name}</p>
 
-            {/* Progress bar */}
             <div className="w-full mt-4">
               <div className="flex justify-between mb-1">
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -84,6 +91,13 @@ export default function WebSkills() {
                   style={{ width: `${skill.percent}%` }}
                 ></div>
               </div>
+            </div>
+
+            {/* Hover text IN FLOW */}
+            <div className="overflow-hidden transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 mt-4">
+              <p className="text-sm text-center text-gray-700 dark:text-gray-300">
+                Used in: {skill.usedIn}
+              </p>
             </div>
           </div>
         ))}
