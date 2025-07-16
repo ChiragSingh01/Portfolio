@@ -31,10 +31,7 @@ export const projects = [
     techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Email.js'],
     github: 'https://github.com/ChiragSingh01/Portfolio',
     backLink: '/web',
-    theme: 'web',
-    screenshots: [
-      '/DemoGallary/Portfolio/Image1.png'
-    ]
+    theme: 'web'
   },
   {
     id: '3',
