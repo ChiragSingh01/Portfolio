@@ -15,10 +15,11 @@ export const mlProjects = [
     title: 'Image Forgery Detection and captioning',
     shortDescription:
       'Implemented a ViT-based hybrid model for detecting and localizing tampered regions in images.',
+    readme: '/ReadMe/Forgery.md',
     description:
       'A ViT-based model integrated with YOLOv5 for forged region detection and captioning. Trained on CASIA 2.0 dataset with ELA masks.',
     techStack: ['Python', 'PyTorch', 'Vision Transformer'],
-    github: 'https://github.com/yourusername/vit-forgery-detection',
+    github: 'https://github.com/ChiragSingh01/Forgery-Detection-and-Captioning',
     backLink: '/ml',
     theme: 'ml'
   },
