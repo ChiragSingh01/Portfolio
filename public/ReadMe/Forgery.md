@@ -81,8 +81,6 @@ Visualize ELA
 bash
 python utils/ela_visualize.py --image path/to/image.jpg
 ```
-## 🧾 Sample Output
-
 
 ## 📊 Metrics
 Detection: F1 Score, IoU, Pixel Accuracy
