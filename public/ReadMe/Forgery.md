@@ -95,8 +95,6 @@ You may use MAE or HuggingFace BLIP-2 weights depending on availability.
 ## 🙋‍♂️ Author
 Chirag Singh
 B.Tech IT | Delhi Technological University
-📧 chiragsingh@example.com
-🌐 LinkedIn | GitHub
 ---
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
